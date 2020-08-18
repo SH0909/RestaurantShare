@@ -25,11 +25,11 @@ def sendEmail(request):
         mail_html+="<br>"
     mail_html+="</body></html>"
     server=smtplib.SMTP_SSL('smtp.gmail.com',465)
-    server.login("poa0909@gmail.com","19753wmf@")
+    server.login()
 
     msg=MIMEMultipart('alternative')
     msg['Subject']=inputTitle
-    msg['From']="poa0909@gmail.com"
+    msg['From']=""
     msg['To']=inputReceiver
     mail_html=MIMEText(mail_html,'html')
     msg.attach(mail_html)
